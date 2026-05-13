@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<title>Tugas Layout CSS 3 Kolom</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style untuk Header */
+header {
+  background-color: #333;
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+/* Membuat container untuk kolom */
+section {
+  display: flex;
+  display: -webkit-flex; /* Untuk browser lama */
+}
+
+/* Style untuk kolom-kolom */
+article {
+  padding: 20px;
+  height: 300px; /* Tinggi box */
+}
+
+/* Kolom Kiri (Sidebar) */
+.column-left {
+  flex: 1;
+  background: #f1f1f1;
+}
+
+/* Kolom Tengah (Konten Utama) */
+.column-center {
+  flex: 2;
+  background: #ddd;
+}
+
+/* Kolom Kanan (Sidebar Tambahan) */
+.column-right {
+  flex: 1;
+  background: #f1f1f1;
+}
+
+/* Style untuk Footer */
+footer {
+  background-color: #777;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsif: Mengubah layout menjadi tumpuk pada layar kecil */
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Header</h2>
+</header>
+
+<section>
+  <article class="column-left">
+    <h3>Kolom Kiri</h3>
+    <p>Ini adalah area informasi untuk sisi kiri layout.</p>
+  </article>
+  
+  <article class="column-center">
+    <h3 align="center">Kolom Tengah</h3>
+    <p>Ini adalah area konten utama yang berada di tengah.</p>
+  </article>
+
+  <article class="column-right">
+    <h3>Kolom Kanan</h3>
+    <p>Ini adalah area informasi untuk sisi kanan layout.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
